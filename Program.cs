@@ -86,6 +86,29 @@ namespace Quest
             {
                 Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
             }
+
+
+
+            // Condition that repeats the adventure or ends the program depending on user response:
+            Console.WriteLine();
+            Console.Write("Would you dare venture on this quest again? (Y/N): ");
+            string repeatQuest = Console.ReadLine().ToLower();
+            Console.WriteLine();
+
+
+            if (repeatQuest == "y")
+            {
+                Console.WriteLine("You are a hero! Let's go!");
+                Console.WriteLine();
+                
+            }
+            else 
+            {
+                Console.WriteLine();
+                Console.WriteLine("Adios Amigo!");
+            }
+
+
         }
     }
 }
