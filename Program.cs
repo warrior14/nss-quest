@@ -185,7 +185,7 @@ Enter your name: ");
                 else
                 {
                     Console.WriteLine();
-                    Console.WriteLine("You coward! Jk, have a good day!");
+                    Console.WriteLine("You coward! Jk, have a good day!!!");
                 }
             }
 
