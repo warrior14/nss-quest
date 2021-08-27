@@ -1,3 +1,6 @@
+using System;
+
+
 namespace Quest
 {
     // An instance of the Adventurer class is an object that will undergo some challenges
@@ -8,17 +11,28 @@ namespace Quest
         // Note: the constructor is defined below.
         public string Name { get; }
 
+        public Robe ColorfulRobe { get; }
+
         // This is a mutable property it has a "get" and a "set"
         //  So it can be read and changed by any code in the application
         public int Awesomeness { get; set; }
 
         // A constructor to make a new Adventurer object with a given name
-        public Adventurer(string name)
+        public Adventurer(string name, Robe colorfulRobe)
         {
             Name = name;
             Awesomeness = 50;
         }
 
+
+        // method returns a string that contains the adventurer's name and a description of their robe:
+        public string GetDescription()
+        {
+            // String.Join() method combines many strings to one, receives 2 arguments: an array (or IEnumerable) and a separator string.
+            string robeColors = String.Join(" and ", ColorfulRobe.Colors);
+            string details = $"Adventurer, {Name}, is wearing a {Hatluster.ShininessDescription} hat with a {robeColors} robe that is {ColorfulRobe.RobeLength} inches long!";
+            return details;
+        }
 
         // This method returns a string that describes the Adventurer's status
         // Note one way to describe what this method does is:
