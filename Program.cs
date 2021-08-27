@@ -48,11 +48,13 @@ namespace Quest
             Console.Write("Please enter your name:");
 
             string adventurerName = Console.ReadLine(); // storing the user's name input in a string variable
-
+            var adventurerRobe = new Robe() {Colors = new List<string>() {"Goldenrod", "Orange"}, Robelength: 14};
 
             Console.WriteLine();
-            Adventurer theAdventurer = new Adventurer(adventurerName);
-            Console.WriteLine();
+            Adventurer theAdventurer = new Adventurer(adventurerName, adventurerRobe);
+           // invoking the GetDescription method from the Adventurer class to display robe details prior to start of quest:
+           Console.WriteLine(theAdventurer.GetDescription());
+           Console.WriteLine();
 
 
             // A list of challenges for the Adventurer to complete
