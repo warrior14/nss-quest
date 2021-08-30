@@ -74,7 +74,7 @@ namespace Quest
          );
 
             Challenge phoneTrivia = new Challenge(
-             @"What has a ring but no finger?
+             @"What has a ring but no finger??
     1) Telephone
     2) Toes
     3) Seashell
